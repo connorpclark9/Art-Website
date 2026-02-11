@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<!--
+  LESSON 1: What is HTML?
+  HTML (HyperText Markup Language) is the standard language for creating webpages.
+  It uses "tags" — special keywords surrounded by angle brackets like <this>.
+  Most tags come in pairs: an opening tag <p> and a closing tag </p>.
+  Everything between the tags is the "content" that tag controls.
+-->
+
+<html lang="en">
+<!--
+  The <html> tag wraps your entire webpage.
+  "lang" is an attribute — extra info about the tag. "en" means English.
+-->
+
+<head>
+  <!--
+    The <head> section contains info ABOUT the page (not visible on the page itself).
+    Think of it like the label on the back of a painting — the viewer doesn't see it,
+    but it provides important details.
+  -->
+  <meta charset="UTF-8">
+  <!-- Tells the browser what character set to use (UTF-8 handles most languages) -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Makes the page look good on phones and tablets -->
+
+  <title>My Art Studio</title>
+  <!-- The text that appears in the browser tab -->
+
+  <style>
+    /*
+      CSS (Cascading Style Sheets) controls HOW things look.
+      HTML = the structure (what's on the page)
+      CSS  = the style (how it looks)
+
+      The format is:
+        selector {
+          property: value;
+        }
+    */
+
+    /* Style the entire page */
+    body {
+      font-family: Georgia, serif;   /* The font to use */
+      max-width: 800px;              /* Don't let content get wider than 800px */
+      margin: 0 auto;                /* Center the content on the page */
+      padding: 40px 20px;            /* Space inside the edges */
+      background-color: #faf8f5;     /* A warm off-white background */
+      color: #333;                   /* Dark gray text color */
+    }
+
+    /* Style the header/banner area */
+    header {
+      text-align: center;            /* Center all text in the header */
+      border-bottom: 2px solid #c9a96e;  /* A gold line under the header */
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    /* Style the main heading (h1 = biggest heading) */
+    h1 {
+      font-size: 36px;
+      color: #2c2c2c;
+      margin-bottom: 5px;
+    }
+
+    /* Style the tagline under the heading */
+    .tagline {
+      font-style: italic;
+      color: #888;
+    }
+    /*
+      The dot (.) means this is a "class" — a reusable label you can
+      attach to any element using class="tagline"
+    */
+
+    /* Style the navigation links */
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    nav a {
+      /* "nav a" means: links (<a> tags) that are INSIDE a <nav> */
+      color: #c9a96e;
+      text-decoration: none;         /* Remove the underline */
+      margin: 0 15px;                /* Space between each link */
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      /* What happens when the mouse hovers over a link */
+      text-decoration: underline;
+    }
+
+    /* Style section headings */
+    h2 {
+      color: #c9a96e;
+      border-bottom: 1px solid #e0d5c1;
+      padding-bottom: 8px;
+    }
+
+    /* Style the gallery grid */
+    .gallery {
+      display: flex;                 /* Arrange items in a row */
+      gap: 20px;                     /* Space between items */
+      justify-content: center;       /* Center the row */
+      flex-wrap: wrap;               /* Wrap to next line on small screens */
+    }
+
+    .gallery-item {
+      background-color: #fff;
+      border: 1px solid #e0d5c1;
+      padding: 10px;
+      text-align: center;
+      width: 200px;
+    }
+
+    .gallery-item img {
+      width: 100%;                   /* Fill the container width */
+    }
+
+    /* Style the footer at the bottom */
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #e0d5c1;
+      color: #aaa;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <!--
+    The <body> is everything VISIBLE on the page.
+    Let's build it section by section.
+  -->
+
+  <!-- === HEADER === -->
+  <header>
+    <h1>My Art Studio</h1>
+    <!-- <h1> to <h6> are headings, h1 is the largest -->
+
+    <p class="tagline">Original paintings and illustrations</p>
+    <!-- <p> is a paragraph -->
+  </header>
+
+  <!-- === NAVIGATION === -->
+  <nav>
+    <!--
+      Links use the <a> tag. The "href" attribute is the destination.
+      Since this is a single page, we use "#sectionName" to jump to
+      a section on the same page (called an anchor link).
+    -->
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- === ABOUT SECTION === -->
+  <section id="about">
+    <!--
+      "id" is a unique label for this section.
+      The nav link href="#about" will scroll here when clicked.
+    -->
+    <h2>About Me</h2>
+    <p>
+      Sample Text -- paragraph one
+    </p>
+    <p>
+      Sample Text - - - - - paragraph two
+    </p>
+  </section>
+
+  <!-- === GALLERY SECTION === -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <!--
+      Below we use placeholder boxes instead of real images.
+      To add your own images later, replace the <img> src with
+      a path to your image file, like:
+        <img src="my-painting.jpg" alt="Description of painting">
+    -->
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="https://placehold.co/200x200/e8dcc8/7a6b5a?text=Painting+1" alt="Painting 1">
+        <p>Mountain Sunrise</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://placehold.co/200x200/d4c5a9/7a6b5a?text=Painting+2" alt="Painting 2">
+        <p>Ocean Waves</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://placehold.co/200x200/c8d8c8/5a6b5a?text=Painting+3" alt="Painting 3">
+        <p>Forest Path</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- === CONTACT SECTION === -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Interested in a piece or want to commission something custom?
+      I'd love to hear from you!
+    </p>
+
+    <!--
+      An unordered list uses <ul> (bullet points).
+      Each item uses <li> (list item).
+    -->
+    <ul>
+      <li>Email: <a href="mailto:artist@example.com">artist@example.com</a></li>
+      <li>Instagram: @myartstudio</li>
+      <li>Location: Your City, State</li>
+    </ul>
+  </section>
+
+  <!-- === FOOTER === -->
+  <footer>
+    <p>&copy; 2026 My Art Studio. All rights reserved.</p>
+    <!--
+      &copy; is a "character entity" — it displays the copyright symbol: ©
+    -->
+  </footer>
+
+</body>
+</html>

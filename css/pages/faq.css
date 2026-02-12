@@ -1,0 +1,152 @@
+/* ============================================
+   KINDRED SEAL — FAQ Page Styles
+   ============================================ */
+
+.faq-page {
+  padding: var(--space-10) 0;
+}
+
+.faq-page__header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.faq-page__header h1 {
+  margin-bottom: var(--space-2);
+}
+
+.faq-page__header p {
+  color: var(--color-warm-gray-dark);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* --- Tabs --- */
+.faq__tabs {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-1);
+  margin-bottom: var(--space-6);
+  border-bottom: 1px solid var(--color-warm-gray);
+  padding-bottom: 0;
+}
+
+.faq__tab {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-warm-gray-dark);
+  background: none;
+  border: none;
+  padding: var(--space-2) var(--space-3);
+  cursor: pointer;
+  position: relative;
+  transition: color var(--transition-fast);
+  min-height: 44px;
+}
+
+.faq__tab::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  transition: background var(--transition-fast);
+}
+
+.faq__tab:hover {
+  color: var(--color-charcoal);
+}
+
+.faq__tab.is-active {
+  color: var(--color-navy);
+}
+
+.faq__tab.is-active::after {
+  background: var(--color-navy);
+}
+
+/* --- FAQ Panels --- */
+.faq__panel {
+  display: none;
+  max-width: var(--max-width-narrow);
+  margin: 0 auto;
+}
+
+.faq__panel.is-active {
+  display: block;
+}
+
+/* --- Accordion Items --- */
+.faq__item {
+  border-bottom: 1px solid var(--color-warm-gray);
+}
+
+.faq__item:first-child {
+  border-top: 1px solid var(--color-warm-gray);
+}
+
+.faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-3) 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-charcoal);
+  transition: color var(--transition-fast);
+  min-height: 44px;
+}
+
+.faq__question:hover {
+  color: var(--color-navy);
+}
+
+.faq__question-icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-left: var(--space-2);
+  transition: transform var(--transition-base);
+}
+
+.faq__item.is-open .faq__question-icon {
+  transform: rotate(180deg);
+}
+
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-base);
+}
+
+.faq__answer-inner {
+  padding: 0 0 var(--space-4);
+  font-size: var(--text-md);
+  color: var(--color-warm-gray-dark);
+  line-height: 1.7;
+}
+
+.faq__answer-inner a {
+  color: var(--color-navy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .faq__question {
+    font-size: var(--text-base);
+    padding: var(--space-2) 0;
+  }
+}

@@ -1,0 +1,156 @@
+/* ============================================
+   KINDRED SEAL — Contact Page Styles
+   ============================================ */
+
+.contact-page {
+  padding: var(--space-10) 0;
+}
+
+.contact-page__header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.contact-page__header h1 {
+  margin-bottom: var(--space-2);
+}
+
+.contact-page__header p {
+  color: var(--color-warm-gray-dark);
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.contact-section {
+  background: var(--color-warm-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-section__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(30, 58, 95, 0.08);
+  color: var(--color-navy);
+  margin-bottom: var(--space-3);
+}
+
+.contact-section__icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.contact-section__title {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-2);
+}
+
+.contact-section__text {
+  font-size: var(--text-base);
+  color: var(--color-warm-gray-dark);
+  line-height: 1.7;
+  margin-bottom: var(--space-3);
+}
+
+.contact-section__subject {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-warm-gray-dark);
+  background: var(--color-cream);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2);
+  margin-top: var(--space-2);
+}
+
+.contact-section__subject strong {
+  display: block;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-charcoal);
+  margin-bottom: 4px;
+}
+
+/* --- Artist Application Section --- */
+.contact-apply {
+  grid-column: 1 / -1;
+  background: var(--color-warm-white);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-apply__layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.contact-apply__title {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-2);
+}
+
+.contact-apply__checklist {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-3) 0;
+}
+
+.contact-apply__checklist li {
+  position: relative;
+  padding-left: var(--space-4);
+  margin-bottom: var(--space-2);
+  font-size: var(--text-base);
+  color: var(--color-warm-gray-dark);
+}
+
+.contact-apply__checklist li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--color-navy);
+  border-radius: 3px;
+}
+
+/* --- General Contact --- */
+.contact-general {
+  text-align: center;
+  padding: var(--space-6) 0;
+  margin-top: var(--space-6);
+  border-top: 1px solid var(--color-warm-gray);
+}
+
+.contact-general p {
+  color: var(--color-warm-gray-dark);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-apply__layout {
+    grid-template-columns: 1fr;
+  }
+}

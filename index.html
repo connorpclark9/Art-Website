@@ -1,231 +1,229 @@
 <!DOCTYPE html>
-<!--
-  LESSON 1: What is HTML?
-  HTML (HyperText Markup Language) is the standard language for creating webpages.
-  It uses "tags" — special keywords surrounded by angle brackets like <this>.
-  Most tags come in pairs: an opening tag <p> and a closing tag </p>.
-  Everything between the tags is the "content" that tag controls.
--->
-
 <html lang="en">
-<!--
-  The <html> tag wraps your entire webpage.
-  "lang" is an attribute — extra info about the tag. "en" means English.
--->
-
 <head>
-  <!--
-    The <head> section contains info ABOUT the page (not visible on the page itself).
-    Think of it like the label on the back of a painting — the viewer doesn't see it,
-    but it provides important details.
-  -->
   <meta charset="UTF-8">
-  <!-- Tells the browser what character set to use (UTF-8 handles most languages) -->
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Makes the page look good on phones and tablets -->
+  <title>Kindred Seal — Local Art With a Story Worth Telling</title>
+  <meta name="description" content="Kindred Seal is a curated art broker connecting buyers with exceptional local artists. Discover art with meaning, learn the stories behind every piece.">
+  <link rel="canonical" href="https://kindredseal.com/">
 
-  <title>My Art Studio</title>
-  <!-- The text that appears in the browser tab -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kindred Seal — Local Art With a Story Worth Telling">
+  <meta property="og:description" content="A curated art broker connecting buyers with exceptional local artists. Discover art with meaning.">
+  <meta property="og:image" content="images/site/og-image.jpg">
+  <meta property="og:url" content="https://kindredseal.com/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kindred Seal — Local Art With a Story Worth Telling">
+  <meta name="twitter:description" content="A curated art broker connecting buyers with exceptional local artists.">
+  <meta name="twitter:image" content="images/site/og-image.jpg">
 
-  <style>
-    /*
-      CSS (Cascading Style Sheets) controls HOW things look.
-      HTML = the structure (what's on the page)
-      CSS  = the style (how it looks)
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
-      The format is:
-        selector {
-          property: value;
-        }
-    */
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
 
-    /* Style the entire page */
-    body {
-      font-family: Georgia, serif;   /* The font to use */
-      max-width: 800px;              /* Don't let content get wider than 800px */
-      margin: 0 auto;                /* Center the content on the page */
-      padding: 40px 20px;            /* Space inside the edges */
-      background-color: #faf8f5;     /* A warm off-white background */
-      color: #333;                   /* Dark gray text color */
-    }
+  <!-- Google Analytics -->
+  <!-- Replace G-XXXXXXXXXX with your actual GA4 Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
-    /* Style the header/banner area */
-    header {
-      text-align: center;            /* Center all text in the header */
-      border-bottom: 2px solid #c9a96e;  /* A gold line under the header */
-      padding-bottom: 20px;
-      margin-bottom: 30px;
-    }
-
-    /* Style the main heading (h1 = biggest heading) */
-    h1 {
-      font-size: 36px;
-      color: #2c2c2c;
-      margin-bottom: 5px;
-    }
-
-    /* Style the tagline under the heading */
-    .tagline {
-      font-style: italic;
-      color: #888;
-    }
-    /*
-      The dot (.) means this is a "class" — a reusable label you can
-      attach to any element using class="tagline"
-    */
-
-    /* Style the navigation links */
-    nav {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    nav a {
-      /* "nav a" means: links (<a> tags) that are INSIDE a <nav> */
-      color: #c9a96e;
-      text-decoration: none;         /* Remove the underline */
-      margin: 0 15px;                /* Space between each link */
-      font-size: 18px;
-    }
-
-    nav a:hover {
-      /* What happens when the mouse hovers over a link */
-      text-decoration: underline;
-    }
-
-    /* Style section headings */
-    h2 {
-      color: #c9a96e;
-      border-bottom: 1px solid #e0d5c1;
-      padding-bottom: 8px;
-    }
-
-    /* Style the gallery grid */
-    .gallery {
-      display: flex;                 /* Arrange items in a row */
-      gap: 20px;                     /* Space between items */
-      justify-content: center;       /* Center the row */
-      flex-wrap: wrap;               /* Wrap to next line on small screens */
-    }
-
-    .gallery-item {
-      background-color: #fff;
-      border: 1px solid #e0d5c1;
-      padding: 10px;
-      text-align: center;
-      width: 200px;
-    }
-
-    .gallery-item img {
-      width: 100%;                   /* Fill the container width */
-    }
-
-    /* Style the footer at the bottom */
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      padding-top: 20px;
-      border-top: 1px solid #e0d5c1;
-      color: #aaa;
-      font-size: 14px;
-    }
-  </style>
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Kindred Seal",
+    "description": "A curated art broker connecting buyers with exceptional local artists through storytelling.",
+    "url": "https://kindredseal.com",
+    "logo": "https://kindredseal.com/images/site/logo.png"
+  }
+  </script>
 </head>
-
 <body>
-  <!--
-    The <body> is everything VISIBLE on the page.
-    Let's build it section by section.
-  -->
 
-  <!-- === HEADER === -->
-  <header>
-    <h1>My Art Studio</h1>
-    <!-- <h1> to <h6> are headings, h1 is the largest -->
+  <!-- Skip to Content -->
+  <a href="#main-content" class="skip-to-content">Skip to content</a>
 
-    <p class="tagline">Original paintings and illustrations</p>
-    <!-- <p> is a paragraph -->
-  </header>
-
-  <!-- === NAVIGATION === -->
-  <nav>
-    <!--
-      Links use the <a> tag. The "href" attribute is the destination.
-      Since this is a single page, we use "#sectionName" to jump to
-      a section on the same page (called an anchor link).
-    -->
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Kindred Seal</a>
+      <div class="nav__links">
+        <a href="index.html" class="nav__link active">Home</a>
+        <a href="artists.html" class="nav__link">Artists</a>
+        <a href="journal.html" class="nav__link">Journal</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="faq.html" class="nav__link">FAQ</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+      </div>
+      <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+        <span class="nav__hamburger-line"></span>
+      </button>
+    </div>
+    <div class="nav__overlay"></div>
+    <div class="nav__mobile-panel" role="dialog" aria-label="Mobile menu">
+      <a href="index.html" class="nav__mobile-link active">Home</a>
+      <a href="artists.html" class="nav__mobile-link">Artists</a>
+      <a href="journal.html" class="nav__mobile-link">Journal</a>
+      <a href="about.html" class="nav__mobile-link">About</a>
+      <a href="faq.html" class="nav__mobile-link">FAQ</a>
+      <a href="contact.html" class="nav__mobile-link">Contact</a>
+    </div>
   </nav>
 
-  <!-- === ABOUT SECTION === -->
-  <section id="about">
-    <!--
-      "id" is a unique label for this section.
-      The nav link href="#about" will scroll here when clicked.
-    -->
-    <h2>About Me</h2>
-    <p>
-      Sample Text -- paragraph one
-    </p>
-    <p>
-      Sample Text - - - - - paragraph two
-    </p>
-  </section>
+  <!-- Main Content -->
+  <main id="main-content">
 
-  <!-- === GALLERY SECTION === -->
-  <section id="gallery">
-    <h2>Gallery</h2>
-    <!--
-      Below we use placeholder boxes instead of real images.
-      To add your own images later, replace the <img> src with
-      a path to your image file, like:
-        <img src="my-painting.jpg" alt="Description of painting">
-    -->
-    <div class="gallery">
-      <div class="gallery-item">
-        <img src="https://placehold.co/200x200/e8dcc8/7a6b5a?text=Painting+1" alt="Painting 1">
-        <p>Mountain Sunrise</p>
+    <!-- Hero Carousel -->
+    <section class="hero" aria-label="Featured artwork carousel">
+      <div class="carousel__track" id="hero-carousel-track">
+        <!-- Slides injected by JS -->
       </div>
-      <div class="gallery-item">
-        <img src="https://placehold.co/200x200/d4c5a9/7a6b5a?text=Painting+2" alt="Painting 2">
-        <p>Ocean Waves</p>
+      <div class="carousel__overlay"></div>
+      <div class="carousel__content container">
+        <h1 class="carousel__tagline">Local art with a story worth telling</h1>
+        <a href="artists.html" class="carousel__cta">Explore Artists</a>
       </div>
-      <div class="gallery-item">
-        <img src="https://placehold.co/200x200/c8d8c8/5a6b5a?text=Painting+3" alt="Painting 3">
-        <p>Forest Path</p>
+      <button class="carousel__prev" aria-label="Previous slide">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      </button>
+      <button class="carousel__next" aria-label="Next slide">
+        <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+      <div class="carousel__dots" role="tablist" aria-label="Carousel slides"></div>
+    </section>
+
+    <!-- Brand Introduction -->
+    <section class="home-intro animate-on-scroll">
+      <div class="container">
+        <div class="divider divider--center"></div>
+        <p class="home-intro__text">
+          Kindred Seal is a curated art broker that connects you with exceptional local artists.
+          We believe every piece of art has a story worth knowing, and every artist deserves to be understood,
+          not just seen. We handle the storytelling so artists can focus on what they do best.
+        </p>
+        <a href="about.html" class="home-intro__link">Our Philosophy</a>
+      </div>
+    </section>
+
+    <!-- Featured Artists -->
+    <section class="featured-artists section" aria-label="Featured artists">
+      <div class="container">
+        <div class="section-header section-header--center animate-on-scroll">
+          <span class="section-header__label">Curated Artists</span>
+          <h2 class="section-header__title">Meet the Artists</h2>
+          <p class="section-header__subtitle">Every artist on Kindred Seal has been hand-selected for the quality of their work and the depth of their story.</p>
+        </div>
+        <div class="featured-artists__grid" id="featured-artists-grid">
+          <!-- Loaded by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Artwork -->
+    <section class="featured-artwork section" aria-label="Featured artwork">
+      <div class="container">
+        <div class="section-header section-header--center animate-on-scroll">
+          <span class="section-header__label">The Collection</span>
+          <h2 class="section-header__title">Featured Work</h2>
+          <p class="section-header__subtitle">Standout pieces from our curated roster, each with a story waiting to be discovered.</p>
+        </div>
+        <div class="featured-artwork__grid" id="featured-artwork-grid">
+          <!-- Loaded by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof section animate-on-scroll">
+      <div class="container">
+        <p class="social-proof__quote">"Every artist we represent has been chosen not just for the quality of their work, but for the depth of the stories they tell through it."</p>
+        <p class="social-proof__attribution text-sans">— The Kindred Seal Curation Team</p>
+      </div>
+    </section>
+
+    <!-- Journal Teaser -->
+    <section class="journal-teaser section" aria-label="Latest journal posts">
+      <div class="container">
+        <div class="section-header animate-on-scroll">
+          <span class="section-header__label">From the Journal</span>
+          <h2 class="section-header__title">Latest Stories</h2>
+        </div>
+        <div class="journal-teaser__grid" id="journal-teaser-grid">
+          <!-- Loaded by JS -->
+        </div>
+        <div style="text-align: center; margin-top: var(--space-5);">
+          <a href="journal.html" class="btn btn--outline">View All Stories</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dual CTA -->
+    <section class="dual-cta" aria-label="Get started">
+      <div class="container">
+        <div class="dual-cta__grid">
+          <div class="dual-cta__item animate-on-scroll">
+            <p class="dual-cta__label">For Buyers</p>
+            <h2 class="dual-cta__heading">Discover Art You Connect With</h2>
+            <a href="artists.html" class="dual-cta__btn">Explore the Collection</a>
+          </div>
+          <div class="dual-cta__item animate-on-scroll animate-delay-2">
+            <p class="dual-cta__label">For Artists</p>
+            <h2 class="dual-cta__heading">Focus on Making Great Art</h2>
+            <a href="contact.html" class="dual-cta__btn">Learn About Working With Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__logo">Kindred Seal</div>
+          <p class="footer__tagline">A curated art broker connecting buyers with exceptional local artists through the power of storytelling.</p>
+        </div>
+        <div>
+          <p class="footer__heading">Explore</p>
+          <a href="artists.html" class="footer__link">Artists</a>
+          <a href="journal.html" class="footer__link">Journal</a>
+          <a href="about.html" class="footer__link">About</a>
+          <a href="faq.html" class="footer__link">FAQ</a>
+          <a href="contact.html" class="footer__link">Contact</a>
+        </div>
+        <div>
+          <p class="footer__heading">Connect</p>
+          <a href="https://instagram.com/kindredseal" target="_blank" rel="noopener noreferrer" class="footer__social-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Kindred Seal. All rights reserved.</p>
       </div>
     </div>
-  </section>
-
-  <!-- === CONTACT SECTION === -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>
-      Interested in a piece or want to commission something custom?
-      I'd love to hear from you!
-    </p>
-
-    <!--
-      An unordered list uses <ul> (bullet points).
-      Each item uses <li> (list item).
-    -->
-    <ul>
-      <li>Email: <a href="mailto:artist@example.com">artist@example.com</a></li>
-      <li>Instagram: @myartstudio</li>
-      <li>Location: Your City, State</li>
-    </ul>
-  </section>
-
-  <!-- === FOOTER === -->
-  <footer>
-    <p>&copy; 2026 My Art Studio. All rights reserved.</p>
-    <!--
-      &copy; is a "character entity" — it displays the copyright symbol: ©
-    -->
   </footer>
 
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/carousel.js"></script>
+  <script src="js/pages/home.js"></script>
 </body>
 </html>

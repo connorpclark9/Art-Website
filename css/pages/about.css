@@ -8,8 +8,7 @@
   padding: var(--space-10) 0 var(--space-6);
 }
 
-.about-hero__title {
-  font-size: var(--text-4xl);
+.about-hero h1 {
   margin-bottom: var(--space-3);
 }
 

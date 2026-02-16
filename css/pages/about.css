@@ -2,6 +2,7 @@
    KINDRED SEAL — About / Philosophy Page
    ============================================ */
 
+/* --- Hero (unchanged) --- */
 .about-hero {
   text-align: center;
   padding: var(--space-10) 0 var(--space-6);
@@ -19,167 +20,159 @@
   margin: 0 auto;
 }
 
-/* --- Story Section --- */
-.about-story {
-  padding: var(--space-6) 0 var(--space-8);
+/* --- Pull Quote --- */
+.pullquote {
+  text-align: center;
+  margin: var(--space-6) auto;
+  padding: var(--space-4) var(--space-3);
+  max-width: 640px;
+  border: none;
+  border-left: none;
+  font-style: normal;
 }
 
-.about-story__content {
-  max-width: var(--max-width-narrow);
-  margin: 0 auto;
-}
-
-/* --- Philosophy Section --- */
-.about-philosophy {
-  background: var(--color-warm-white);
-  padding: var(--space-8) 0;
-}
-
-.about-philosophy__content {
-  max-width: var(--max-width-narrow);
-  margin: 0 auto;
-}
-
-.about-values {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-4);
-  margin-top: var(--space-6);
-}
-
-.about-value {
-  padding: var(--space-3);
-}
-
-.about-value__icon {
-  font-size: var(--text-2xl);
-  margin-bottom: var(--space-2);
-  color: var(--color-navy);
-}
-
-.about-value__title {
+.pullquote p {
   font-family: var(--font-serif);
-  font-size: var(--text-lg);
-  font-weight: 600;
-  margin-bottom: var(--space-1);
-}
-
-.about-value__text {
-  font-size: var(--text-base);
-  color: var(--color-warm-gray-dark);
-  line-height: 1.6;
-}
-
-/* --- Curation Standard --- */
-.about-curation {
-  padding: var(--space-8) 0;
-}
-
-.about-curation__content {
-  max-width: var(--max-width-narrow);
-  margin: 0 auto;
-}
-
-/* --- How It Works --- */
-.about-how-it-works {
-  background: var(--color-warm-white);
-  padding: var(--space-8) 0;
-}
-
-.how-it-works__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-6);
-  margin-top: var(--space-6);
-}
-
-.how-it-works__column h3 {
-  font-size: var(--text-xl);
-  margin-bottom: var(--space-3);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.4;
   color: var(--color-navy);
+  margin-bottom: 0;
 }
 
-.how-it-works__steps {
-  counter-reset: step;
-}
-
-.how-it-works__step {
-  counter-increment: step;
-  padding-left: var(--space-5);
-  position: relative;
-  margin-bottom: var(--space-3);
-}
-
-.how-it-works__step::before {
-  content: counter(step);
-  position: absolute;
-  left: 0;
-  top: 2px;
-  font-family: var(--font-sans);
-  font-size: var(--text-sm);
-  font-weight: 700;
-  color: var(--color-navy);
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid var(--color-navy);
-  border-radius: 50%;
-}
-
-.how-it-works__step-title {
-  font-family: var(--font-sans);
-  font-size: var(--text-base);
+.pullquote--large p {
+  font-size: var(--text-3xl);
   font-weight: 600;
-  margin-bottom: 4px;
 }
 
-.how-it-works__step-text {
-  font-size: var(--text-sm);
-  color: var(--color-warm-gray-dark);
-  line-height: 1.6;
+.pullquote--wide {
+  max-width: 800px;
 }
 
-/* --- Team Section --- */
-.about-team {
-  padding: var(--space-8) 0;
-}
-
-.about-team__content {
-  max-width: var(--max-width-narrow);
-  margin: 0 auto;
+/* --- Center all body text on About page --- */
+.about-why .prose,
+.about-belief__subsection .prose {
   text-align: center;
 }
 
-.about-team__photo {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto var(--space-3);
-  box-shadow: var(--shadow-md);
+/* --- Why Section --- */
+.about-why {
+  padding: var(--space-6) 0 var(--space-8);
 }
 
-.about-team__name {
+/* --- Belief Subsections --- */
+.about-belief__subsection {
+  margin-bottom: var(--space-6);
+}
+
+.about-belief__subsection:last-child {
+  margin-bottom: 0;
+}
+
+.about-belief__subsection h3 {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  margin-bottom: var(--space-3);
+  color: var(--color-charcoal);
+  text-align: center;
+}
+
+/* --- Experience Two-Column --- */
+.about-experience__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
+.about-experience__column h3 {
+  font-family: var(--font-serif);
   font-size: var(--text-xl);
-  margin-bottom: 4px;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: var(--space-3);
 }
 
-.about-team__role {
-  font-family: var(--font-sans);
-  font-size: var(--text-sm);
-  color: var(--color-warm-gray-dark);
+/* --- What We're Not Cards --- */
+.about-not__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.about-not__card {
+  padding: var(--space-4);
+  background: var(--color-cream);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--color-navy);
+}
+
+.about-not__card h3 {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 600;
   margin-bottom: var(--space-2);
+  color: var(--color-charcoal);
+}
+
+.about-not__card p {
+  font-size: var(--text-base);
+  color: var(--color-warm-gray-dark);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* --- Closing Section --- */
+.about-closing__prose {
+  text-align: center;
+}
+
+.about-closing__prose p {
+  text-align: center;
+}
+
+.about-closing__welcome {
+  font-family: var(--font-sans);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-navy);
+  margin-top: var(--space-5);
+  text-align: center;
+  letter-spacing: 0.02em;
 }
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  .about-values {
+  .about-experience__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .about-not__grid {
     grid-template-columns: 1fr;
   }
 
-  .how-it-works__grid {
-    grid-template-columns: 1fr;
+  .about-belief__subsection h3 {
+    font-size: var(--text-xl);
+  }
+
+  .pullquote p {
+    font-size: var(--text-xl);
+  }
+
+  .pullquote--large p {
+    font-size: var(--text-2xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .pullquote p {
+    font-size: var(--text-lg);
+  }
+
+  .pullquote--large p {
+    font-size: var(--text-xl);
   }
 }

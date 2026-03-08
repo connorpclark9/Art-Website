@@ -3,13 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/site/ks-monogram-ink-navy.png">
   <title>Page Not Found | Kindred Seal</title>
   <meta name="description" content="The page you're looking for doesn't exist. Let us help you find what you're looking for.">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/global.css">
@@ -69,9 +65,12 @@
   <!-- Navigation -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo">Kindred Seal</a>
+      <a href="index.html" class="nav__logo">
+        <img src="images/site/ks-monogram-deep-ocean.png" alt="" class="nav__logo-monogram">
+        Kindred Seal
+      </a>
       <div class="nav__links">
-        <a href="index.html" class="nav__link">Home</a>
+        <a href="gallery.html" class="nav__link">Gallery</a>
         <a href="artists.html" class="nav__link">Artists</a>
         <a href="journal.html" class="nav__link">Journal</a>
         <a href="about.html" class="nav__link">About</a>
@@ -86,7 +85,7 @@
     </div>
     <div class="nav__overlay"></div>
     <div class="nav__mobile-panel" role="dialog" aria-label="Mobile menu">
-      <a href="index.html" class="nav__mobile-link">Home</a>
+      <a href="gallery.html" class="nav__mobile-link">Gallery</a>
       <a href="artists.html" class="nav__mobile-link">Artists</a>
       <a href="journal.html" class="nav__mobile-link">Journal</a>
       <a href="about.html" class="nav__mobile-link">About</a>
@@ -98,11 +97,11 @@
   <main id="main-content">
     <section class="error-page">
       <div>
-        <p class="error-page__code">404 — Page Not Found</p>
-        <h1 class="error-page__title">This page doesn't exist</h1>
+        <img src="images/site/ks-monogram-ink-navy.png" alt="" style="width: 48px; height: 48px; margin: 0 auto var(--space-3);">
+        <p class="error-page__code">404</p>
+        <h1 class="error-page__title">This piece seems to have found another home</h1>
         <p class="error-page__text">
-          The page you're looking for may have been moved or no longer exists.
-          Let us help you find your way back.
+          The page you're looking for has moved on. But there's plenty more to discover.
         </p>
         <div class="error-page__links">
           <a href="index.html" class="btn btn--primary">Go Home</a>
@@ -118,11 +117,15 @@
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand">
-          <div class="footer__logo">Kindred Seal</div>
-          <p class="footer__tagline">Reconnecting people with art that is beautiful, meaningful, and worth knowing the story behind.</p>
+          <div class="footer__logo">
+            <img src="images/site/ks-monogram-fog.png" alt="" class="footer__monogram">
+            Kindred Seal
+          </div>
+          <p class="footer__tagline">Enriching everyday life through beautiful art and the meaningful stories behind it.</p>
         </div>
         <div>
           <p class="footer__heading">Explore</p>
+          <a href="gallery.html" class="footer__link">Gallery</a>
           <a href="artists.html" class="footer__link">Artists</a>
           <a href="journal.html" class="footer__link">Journal</a>
           <a href="about.html" class="footer__link">About</a>

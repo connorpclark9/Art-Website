@@ -2,7 +2,24 @@
   "permissions": {
     "allow": [
       "Bash(dir:*)",
-      "Bash(npx -y http-server:*)"
+      "Bash(npx -y http-server:*)",
+      "Bash(xargs ls -la)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx --version)",
+      "Bash(python -m http.server 3000)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/index.html)",
+      "Bash(for f in index.html about.html contact.html faq.html 404.html artists.html artist.html artwork.html journal.html post.html gallery.html)",
+      "Bash(do sed -i 's|ks-monogram-ink-navy.png\"\" alt=\"\"\"\" class=\"\"nav__logo-monogram\"\"|ks-monogram-fog.png\"\" alt=\"\"\"\" class=\"\"nav__logo-monogram\"\"|g' \"$f\")",
+      "Bash(done)",
+      "Bash(grep -l \"ks-monogram-fog.png\" *.html)",
+      "Bash(for f in *.html)",
+      "Bash(do sed -i 's/class=\"\"nav__logo-monogram\"\">/<NAVMONO>/g; s|images/site/ks-monogram-fog.png\"\" alt=\"\"\"\" <NAVMONO>|images/site/ks-monogram-ink-navy.png\"\" alt=\"\"\"\" class=\"\"nav__logo-monogram\"\">|g' \"$f\")",
+      "Bash(grep -n \"nav__logo-monogram\" *.html)",
+      "Bash(grep -n \"footer__monogram\" *.html)",
+      "Bash(ls \"C:\\\\Users\\\\Conno\\\\OneDrive\\\\Documents\\\\GitHub\\\\Art-Website\\\\images\\\\site\\\\ks-monogram-slate\"*)",
+      "Bash(grep -c \"nav__link\" *.html)",
+      "Bash(grep -n \"faq.html.*nav__link\" *.html)",
+      "Bash(grep -n \"faq.html.*nav__mobile-link\" *.html)"
     ]
   }
 }

@@ -21,10 +21,10 @@
 
 .artwork-detail__main-image {
   width: 100%;
-  border-radius: var(--radius-md);
+  border-radius: 0;
   cursor: zoom-in;
   transition: opacity var(--transition-fast);
-  box-shadow: var(--shadow-md);
+  border: 1px solid var(--color-border);
 }
 
 .artwork-detail__main-image:hover {
@@ -40,7 +40,7 @@
 .artwork-detail__thumb {
   width: 64px;
   height: 64px;
-  border-radius: var(--radius-sm);
+  border-radius: 0;
   object-fit: cover;
   cursor: pointer;
   border: 2px solid transparent;
@@ -51,7 +51,7 @@
 .artwork-detail__thumb:hover,
 .artwork-detail__thumb.is-active {
   opacity: 1;
-  border-color: var(--color-navy);
+  border-color: var(--color-accent-primary);
 }
 
 /* --- Info Section --- */
@@ -66,13 +66,13 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-navy);
+  color: var(--color-accent-primary);
   margin-bottom: var(--space-2);
   text-decoration: none;
 }
 
 .artwork-detail__artist-link:hover {
-  color: var(--color-navy-light);
+  color: var(--brand-steel-blue);
 }
 
 .artwork-detail__title {
@@ -83,7 +83,7 @@
 .artwork-detail__meta {
   font-family: var(--font-sans);
   font-size: var(--text-sm);
-  color: var(--color-warm-gray-dark);
+  color: var(--color-text-secondary);
   margin-bottom: var(--space-4);
   line-height: 1.8;
 }
@@ -95,7 +95,7 @@
 .artwork-detail__divider {
   width: 100%;
   height: 1px;
-  background: var(--color-warm-gray);
+  background: var(--color-border);
   margin: var(--space-4) 0;
 }
 
@@ -107,7 +107,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--color-navy);
+  color: var(--color-accent-primary);
   margin-bottom: var(--space-2);
 }
 
@@ -117,10 +117,10 @@
 
 /* Inquiry Section */
 .artwork-detail__inquiry {
-  background: var(--color-warm-white);
-  border-radius: var(--radius-md);
+  background: var(--brand-parchment);
+  border-radius: 0;
   padding: var(--space-4);
-  border: 1px solid var(--color-warm-gray);
+  border: 1px solid var(--color-border);
 }
 
 .artwork-detail__inquiry-label {
@@ -129,7 +129,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-warm-gray-dark);
+  color: var(--color-text-secondary);
   margin-bottom: var(--space-1);
 }
 
@@ -137,20 +137,20 @@
   font-family: var(--font-serif);
   font-size: var(--text-xl);
   font-weight: 600;
-  color: var(--color-charcoal);
+  color: var(--color-text-primary);
   margin-bottom: var(--space-3);
 }
 
 .artwork-detail__inquiry-text {
   font-size: var(--text-sm);
-  color: var(--color-warm-gray-dark);
+  color: var(--color-text-secondary);
   margin-bottom: var(--space-2);
 }
 
 /* --- More From Artist --- */
 .more-from-artist {
   padding: var(--space-8) 0;
-  border-top: 1px solid var(--color-warm-gray);
+  border-top: 1px solid var(--color-border);
 }
 
 .more-from-artist__grid {
@@ -170,7 +170,7 @@
 }
 
 .artwork-not-found p {
-  color: var(--color-warm-gray-dark);
+  color: var(--color-text-secondary);
   margin-bottom: var(--space-4);
 }
 

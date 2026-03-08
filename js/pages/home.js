@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const journalGrid = document.getElementById('journal-teaser-grid');
 
   KindredSeal.showSkeleton(artistsGrid, 'artist-card', 4);
-  KindredSeal.showSkeleton(artworkGrid, 'artwork-card', 6);
+  KindredSeal.showSkeleton(artworkGrid, 'artwork-card', 4);
   KindredSeal.showSkeleton(journalGrid, 'journal-card', 2);
 
   // Fetch all data in parallel
@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       track.innerHTML = featured.map((artwork, i) => `
         <div class="carousel__slide ${i === 0 ? 'is-active' : ''}">
           <img src="${artwork.mainImage}" alt="${artwork.title} by ${artwork.artistName}" class="carousel__slide-image" loading="${i === 0 ? 'eager' : 'lazy'}">
+          <p class="carousel__slide-attribution">${artwork.title} by ${artwork.artistName}</p>
         </div>
       `).join('');
 
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           <div class="card__body">
             <p class="card__subtitle">${artist.medium}</p>
             <h3 class="card__title">${artist.name}</h3>
-            <p class="card__text">${artist.tagline}</p>
+            <p class="card__text card__text--tagline">${artist.tagline}</p>
           </div>
         </a>
       </div>
@@ -72,10 +73,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     const featured = artworks
       .filter(a => a.featured && a.status === 'available')
       .sort((a, b) => a.featuredOrder - b.featuredOrder)
-      .slice(0, 6);
+      .slice(0, 4);
 
     const html = featured.map((artwork, i) => `
-      <div class="card animate-on-scroll animate-delay-${(i % 3) + 1}">
+      <div class="card animate-on-scroll animate-delay-${(i % 2) + 1}">
         <a href="artwork.html?id=${artwork.id}" class="card__link">
           <div class="card__image-wrapper" style="aspect-ratio: 1;">
             <img src="${artwork.mainImage}" alt="${artwork.title} by ${artwork.artistName}" class="card__image" loading="lazy">

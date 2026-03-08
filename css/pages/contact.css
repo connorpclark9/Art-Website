@@ -16,7 +16,7 @@
 }
 
 .contact-page__header p {
-  color: var(--color-warm-gray-dark);
+  color: var(--color-text-secondary);
   max-width: 540px;
   margin: 0 auto;
 }
@@ -30,10 +30,10 @@
 }
 
 .contact-section {
-  background: var(--color-warm-white);
-  border-radius: var(--radius-md);
+  background: var(--color-bg-primary);
+  border-radius: 0;
   padding: var(--space-5);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
 }
 
 .contact-section__icon {
@@ -42,9 +42,9 @@
   justify-content: center;
   width: 48px;
   height: 48px;
-  border-radius: 50%;
-  background: rgba(30, 58, 95, 0.08);
-  color: var(--color-navy);
+  border-radius: 0;
+  background: rgba(42, 72, 103, 0.08);
+  color: var(--color-accent-primary);
   margin-bottom: var(--space-3);
 }
 
@@ -63,7 +63,7 @@
 
 .contact-section__text {
   font-size: var(--text-base);
-  color: var(--color-warm-gray-dark);
+  color: var(--color-text-secondary);
   line-height: 1.7;
   margin-bottom: var(--space-3);
 }
@@ -71,9 +71,9 @@
 .contact-section__subject {
   font-family: var(--font-sans);
   font-size: var(--text-sm);
-  color: var(--color-warm-gray-dark);
-  background: var(--color-cream);
-  border-radius: var(--radius-sm);
+  color: var(--color-text-secondary);
+  background: var(--brand-parchment);
+  border-radius: 0;
   padding: var(--space-2);
   margin-top: var(--space-2);
 }
@@ -83,17 +83,17 @@
   font-size: var(--text-xs);
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--color-charcoal);
+  color: var(--color-text-primary);
   margin-bottom: 4px;
 }
 
 /* --- Artist Application Section --- */
 .contact-apply {
   grid-column: 1 / -1;
-  background: var(--color-warm-white);
-  border-radius: var(--radius-md);
+  background: var(--color-bg-primary);
+  border-radius: 0;
   padding: var(--space-5);
-  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
 }
 
 .contact-apply__layout {
@@ -118,7 +118,7 @@
   padding-left: var(--space-4);
   margin-bottom: var(--space-2);
   font-size: var(--text-base);
-  color: var(--color-warm-gray-dark);
+  color: var(--color-text-secondary);
 }
 
 .contact-apply__checklist li::before {
@@ -128,8 +128,8 @@
   top: 6px;
   width: 16px;
   height: 16px;
-  border: 2px solid var(--color-navy);
-  border-radius: 3px;
+  border: 2px solid var(--color-accent-warm);
+  border-radius: 0;
 }
 
 /* --- General Contact --- */
@@ -137,11 +137,11 @@
   text-align: center;
   padding: var(--space-6) 0;
   margin-top: var(--space-6);
-  border-top: 1px solid var(--color-warm-gray);
+  border-top: 1px solid var(--color-border);
 }
 
 .contact-general p {
-  color: var(--color-warm-gray-dark);
+  color: var(--color-text-secondary);
 }
 
 /* --- Responsive --- */

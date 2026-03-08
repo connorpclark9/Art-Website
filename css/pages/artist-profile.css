@@ -26,8 +26,8 @@
   bottom: 0;
   background: linear-gradient(
     to bottom,
-    rgba(44, 40, 36, 0.05) 0%,
-    rgba(44, 40, 36, 0.6) 100%
+    rgba(23, 36, 48, 0.05) 0%,
+    rgba(23, 36, 48, 0.55) 100%
   );
 }
 
@@ -45,7 +45,7 @@
   font-family: var(--font-serif);
   font-size: var(--text-4xl);
   font-weight: 700;
-  color: var(--color-warm-white);
+  color: var(--brand-paper);
   margin-bottom: var(--space-1);
   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
@@ -53,7 +53,7 @@
 .artist-hero__tagline {
   font-family: var(--font-serif);
   font-size: var(--text-xl);
-  color: rgba(255, 253, 249, 0.85);
+  color: rgba(250, 247, 242, 0.85);
   font-style: italic;
 }
 
@@ -74,13 +74,13 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--color-navy);
+  color: var(--color-accent-primary);
   margin-bottom: var(--space-2);
 }
 
 /* --- Creative Process --- */
 .artist-process {
-  background: var(--color-warm-white);
+  background: var(--brand-parchment);
   padding: var(--space-8) 0;
 }
 
@@ -90,7 +90,7 @@
 }
 
 .artist-process__content img {
-  border-radius: var(--radius-md);
+  border-radius: 0;
   margin: var(--space-4) 0;
 }
 
@@ -115,16 +115,16 @@
 }
 
 .artwork-thumb {
-  background: var(--color-warm-white);
-  border-radius: var(--radius-md);
+  background: var(--color-bg-primary);
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-base), border-color var(--transition-base);
 }
 
 .artwork-thumb:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+  border-color: var(--color-accent-primary);
 }
 
 .artwork-thumb__link {
@@ -147,7 +147,7 @@
 }
 
 .artwork-thumb:hover .artwork-thumb__image {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 .artwork-thumb__body {
@@ -164,7 +164,7 @@
 .artwork-thumb__meta {
   font-family: var(--font-sans);
   font-size: var(--text-xs);
-  color: var(--color-warm-gray-dark);
+  color: var(--color-text-secondary);
 }
 
 /* Collected works styling */
@@ -180,7 +180,7 @@
 
 /* --- Inquiry CTA --- */
 .artist-inquiry {
-  background: var(--color-warm-white);
+  background: var(--brand-parchment);
   padding: var(--space-8) 0;
   text-align: center;
 }
@@ -192,7 +192,7 @@
 
 .artist-inquiry__text {
   font-size: var(--text-md);
-  color: var(--color-warm-gray-dark);
+  color: var(--color-text-secondary);
   margin-bottom: var(--space-3);
 }
 
@@ -207,7 +207,7 @@
 }
 
 .artist-not-found p {
-  color: var(--color-warm-gray-dark);
+  color: var(--color-text-secondary);
   margin-bottom: var(--space-4);
 }
 

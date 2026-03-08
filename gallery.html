@@ -4,28 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="images/site/ks-monogram-ink-navy.png">
-  <title>Artist Profile | Kindred Seal</title>
-  <meta name="description" content="Discover the story, process, and work of this Kindred Seal artist.">
-  <link rel="canonical" href="https://kindredseal.com/artist.html">
+  <title>Gallery | Kindred Seal</title>
+  <meta name="description" content="Browse all available artwork from Kindred Seal's curated roster of artists.">
+  <link rel="canonical" href="https://kindredseal.com/gallery.html">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Artist Profile | Kindred Seal">
-  <meta property="og:description" content="Discover the story, process, and work of this Kindred Seal artist.">
+  <meta property="og:title" content="Gallery | Kindred Seal">
+  <meta property="og:description" content="Browse all available artwork from Kindred Seal's curated roster of artists.">
   <meta property="og:image" content="images/site/og-image.jpg">
-  <meta property="og:url" content="https://kindredseal.com/artist.html">
+  <meta property="og:url" content="https://kindredseal.com/gallery.html">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Artist Profile | Kindred Seal">
-  <meta name="twitter:description" content="Discover the story, process, and work of this Kindred Seal artist.">
+  <meta name="twitter:title" content="Gallery | Kindred Seal">
+  <meta name="twitter:description" content="Browse all available artwork from Kindred Seal's curated roster of artists.">
   <meta name="twitter:image" content="images/site/og-image.jpg">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/pages/artist-profile.css">
+  <link rel="stylesheet" href="css/pages/gallery.css">
 
   <!-- Google Analytics -->
-  <!-- Replace G-XXXXXXXXXX with your actual GA4 Measurement ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-0TCDM3GH96"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -47,7 +46,7 @@
         Kindred Seal
       </a>
       <div class="nav__links">
-        <a href="gallery.html" class="nav__link">Gallery</a>
+        <a href="gallery.html" class="nav__link active">Gallery</a>
         <a href="artists.html" class="nav__link">Artists</a>
         <a href="journal.html" class="nav__link">Journal</a>
         <a href="about.html" class="nav__link">About</a>
@@ -74,32 +73,25 @@
   <!-- Main Content -->
   <main id="main-content">
 
-    <!-- Breadcrumb -->
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html">Home</a>
-      <span class="breadcrumb__separator">/</span>
-      <a href="artists.html">Artists</a>
-      <span class="breadcrumb__separator">/</span>
-      <span id="breadcrumb-current">Artist</span>
-    </nav>
-
-    <section id="artist-hero" class="artist-hero"></section>
-
-    <section class="artist-story section">
+    <section class="gallery-page">
       <div class="container">
-        <div id="artist-story-content" class="artist-story__content"></div>
+        <header class="gallery-page__header">
+          <h1>Gallery</h1>
+          <p>Browse all available work from our curated roster of artists.</p>
+        </header>
+
+        <!-- Filter Tabs -->
+        <div class="gallery__filters">
+          <button class="gallery__filter is-active" data-filter="all">All</button>
+          <!-- JS will add artist-name filters here -->
+        </div>
+
+        <!-- Gallery Grid -->
+        <div id="gallery-grid" class="gallery-grid">
+          <!-- JS will populate -->
+        </div>
       </div>
     </section>
-
-    <section class="artist-process section">
-      <div class="container">
-        <div id="artist-process-content" class="artist-process__content"></div>
-      </div>
-    </section>
-
-    <section id="artist-gallery" class="artist-gallery"></section>
-
-    <section id="artist-inquiry" class="artist-inquiry"></section>
 
   </main>
 
@@ -144,6 +136,6 @@
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
-  <script src="js/pages/artist-profile.js"></script>
+  <script src="js/pages/gallery.js"></script>
 </body>
 </html>

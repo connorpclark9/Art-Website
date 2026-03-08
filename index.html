@@ -3,25 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kindred Seal — Art you'll want to come home to.</title>
-  <meta name="description" content="Kindred Seal is a curated art broker connecting buyers with exceptional local artists. Discover art with meaning, learn the stories behind every piece.">
+  <title>Kindred Seal — Art that lives with you.</title>
+  <meta name="description" content="Kindred Seal is a curated art brokerage connecting artists with collectors who value an artwork's story as much as its beauty.">
   <link rel="canonical" href="https://kindredseal.com/">
+  <link rel="icon" type="image/png" href="images/site/ks-monogram-ink-navy.png">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Kindred Seal — Art you want to come home to">
-  <meta property="og:description" content="A curated art broker connecting buyers with exceptional local artists. Discover art with meaning.">
+  <meta property="og:title" content="Kindred Seal — Art that lives with you.">
+  <meta property="og:description" content="A curated art brokerage connecting artists with collectors who value an artwork's story as much as its beauty.">
   <meta property="og:image" content="images/site/og-image.jpg">
   <meta property="og:url" content="https://kindredseal.com/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Kindred Seal — Art you want to come home to">
-  <meta name="twitter:description" content="A curated art broker connecting buyers with exceptional local artists.">
+  <meta name="twitter:title" content="Kindred Seal — Art that lives with you.">
+  <meta name="twitter:description" content="A curated art brokerage connecting artists with collectors who value an artwork's story as much as its beauty.">
   <meta name="twitter:image" content="images/site/og-image.jpg">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/global.css">
@@ -43,7 +39,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Kindred Seal",
-    "description": "Reconnecting people with art that is beautiful, meaningful, and worth knowing the story behind.",
+    "description": "A curated art brokerage connecting artists with collectors who value an artwork's story as much as its beauty.",
     "url": "https://kindredseal.com",
     "logo": "https://kindredseal.com/images/site/logo.png"
   }
@@ -57,9 +53,12 @@
   <!-- Navigation -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo">Kindred Seal</a>
+      <a href="index.html" class="nav__logo">
+        <img src="images/site/ks-monogram-deep-ocean.png" alt="" class="nav__logo-monogram">
+        Kindred Seal
+      </a>
       <div class="nav__links">
-        <a href="index.html" class="nav__link active">Home</a>
+        <a href="gallery.html" class="nav__link">Gallery</a>
         <a href="artists.html" class="nav__link">Artists</a>
         <a href="journal.html" class="nav__link">Journal</a>
         <a href="about.html" class="nav__link">About</a>
@@ -74,7 +73,7 @@
     </div>
     <div class="nav__overlay"></div>
     <div class="nav__mobile-panel" role="dialog" aria-label="Mobile menu">
-      <a href="index.html" class="nav__mobile-link active">Home</a>
+      <a href="gallery.html" class="nav__mobile-link">Gallery</a>
       <a href="artists.html" class="nav__mobile-link">Artists</a>
       <a href="journal.html" class="nav__mobile-link">Journal</a>
       <a href="about.html" class="nav__mobile-link">About</a>
@@ -93,7 +92,7 @@
       </div>
       <div class="carousel__overlay"></div>
       <div class="carousel__content container">
-        <h1 class="carousel__tagline">Art you want to come home to</h1>
+        <h1 class="carousel__tagline">Art that lives with you.</h1>
         <a href="artists.html" class="carousel__cta">Explore Artists</a>
       </div>
       <button class="carousel__prev" aria-label="Previous slide">
@@ -108,28 +107,11 @@
     <!-- Brand Introduction -->
     <section class="home-intro animate-on-scroll">
       <div class="container">
-        <div class="divider divider--center"></div>
+        <img src="images/site/ks-monogram-ink-navy.png" alt="" class="home-intro__monogram">
         <p class="home-intro__text">
-          Art should stop you in your tracks before it asks you to think. It should reward you on first glance and again on the hundredth. But somewhere along the way, contemporary art decided beauty wasn't enough, accessibility was a weakness, and story was irrelevant.
-        </p>
-        <p class="home-intro__text">
-          We disagree. <strong>Kindred Seal exists to champion artists who create work that is both beautiful and deeply meaningful</strong>, and to share their stories so authentically that when you bring a piece home, you bring the artist's story home with it.
+          Kindred Seal champions artists who create work that is both beautiful and deeply meaningful. We learn their stories, share them authentically, and connect their art with people who will truly value it. When you bring a piece home, you bring the artist's story home with it.
         </p>
         <a href="about.html" class="home-intro__link">Our Philosophy</a>
-      </div>
-    </section>
-
-    <!-- Featured Artists -->
-    <section class="featured-artists section" aria-label="Featured artists">
-      <div class="container">
-        <div class="section-header section-header--center animate-on-scroll">
-          <span class="section-header__label">Curated Artists</span>
-          <h2 class="section-header__title">Meet the Artists</h2>
-          <p class="section-header__subtitle">Every artist on Kindred Seal has been hand-selected for the quality of their work and the depth of their story.</p>
-        </div>
-        <div class="featured-artists__grid" id="featured-artists-grid">
-          <!-- Loaded by JS -->
-        </div>
       </div>
     </section>
 
@@ -147,11 +129,25 @@
       </div>
     </section>
 
-    <!-- Social Proof -->
+    <!-- Featured Artists -->
+    <section class="featured-artists section" aria-label="Featured artists">
+      <div class="container">
+        <div class="section-header section-header--center animate-on-scroll">
+          <span class="section-header__label">Curated Artists</span>
+          <h2 class="section-header__title">Meet the Artists</h2>
+          <p class="section-header__subtitle">Every artist on Kindred Seal has been hand-selected for the quality of their work and the depth of their story.</p>
+        </div>
+        <div class="featured-artists__grid" id="featured-artists-grid">
+          <!-- Loaded by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Philosophy Quote -->
     <section class="social-proof section animate-on-scroll">
       <div class="container">
-        <p class="social-proof__quote">"Beauty is what stops you in your tracks. Beauty is what makes you return to a piece again and again, discovering something new each time. Beauty is the language art speaks before words get involved."</p>
-        <p class="social-proof__attribution text-sans">— Kindred Seal's Philosophy</p>
+        <p class="social-proof__quote">"Beauty is the language art speaks before words get involved."</p>
+        <p class="social-proof__attribution text-sans">— Kindred Seal</p>
       </div>
     </section>
 
@@ -176,13 +172,13 @@
       <div class="container">
         <div class="dual-cta__grid">
           <div class="dual-cta__item animate-on-scroll">
-            <p class="dual-cta__label">For Buyers</p>
-            <h2 class="dual-cta__heading">Discover Art You Connect With</h2>
-            <a href="artists.html" class="dual-cta__btn">Explore the Collection</a>
+            <p class="dual-cta__label">For Collectors</p>
+            <h2 class="dual-cta__heading">We find the artists and their stories. You find the piece that speaks to you.</h2>
+            <a href="gallery.html" class="dual-cta__btn">Explore the Collection</a>
           </div>
           <div class="dual-cta__item animate-on-scroll animate-delay-2">
             <p class="dual-cta__label">For Artists</p>
-            <h2 class="dual-cta__heading">Focus on Making Great Art</h2>
+            <h2 class="dual-cta__heading">You make the art. We take care of everything else.</h2>
             <a href="contact.html" class="dual-cta__btn">Learn About Working With Us</a>
           </div>
         </div>
@@ -196,11 +192,15 @@
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand">
-          <div class="footer__logo">Kindred Seal</div>
-          <p class="footer__tagline">Reconnecting people with art that is beautiful, meaningful, and worth knowing the story behind.</p>
+          <div class="footer__logo">
+            <img src="images/site/ks-monogram-fog.png" alt="" class="footer__monogram">
+            Kindred Seal
+          </div>
+          <p class="footer__tagline">Enriching everyday life through beautiful art and the meaningful stories behind it.</p>
         </div>
         <div>
           <p class="footer__heading">Explore</p>
+          <a href="gallery.html" class="footer__link">Gallery</a>
           <a href="artists.html" class="footer__link">Artists</a>
           <a href="journal.html" class="footer__link">Journal</a>
           <a href="about.html" class="footer__link">About</a>

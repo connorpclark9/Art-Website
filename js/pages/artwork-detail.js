@@ -23,6 +23,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute('content', KindredSeal.truncate(artwork.story, 160));
 
+  // --- Update Breadcrumb ---
+  const breadcrumbCurrent = document.getElementById('breadcrumb-current');
+  if (breadcrumbCurrent) breadcrumbCurrent.textContent = artwork.title;
+
   // --- Initialize Lightbox ---
   const lightbox = new Lightbox();
 

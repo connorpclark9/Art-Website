@@ -225,10 +225,30 @@ const KindredSeal = {
     return `mailto:${email}?subject=${encodeURIComponent(subject)}`;
   },
 
+  // --- Back to Top Button ---
+  initBackToTop() {
+    const btn = document.querySelector('.back-to-top');
+    if (!btn) return;
+
+    const toggleVisibility = () => {
+      if (window.scrollY > 600) {
+        btn.classList.add('is-visible');
+      } else {
+        btn.classList.remove('is-visible');
+      }
+    };
+
+    window.addEventListener('scroll', toggleVisibility, { passive: true });
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  },
+
   // --- Initialize ---
   init() {
     this.initNav();
     this.initScrollAnimations();
+    this.initBackToTop();
   }
 };
 

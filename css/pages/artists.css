@@ -14,7 +14,7 @@
 
 .artists-page__intro p {
   font-size: var(--text-md);
-  color: var(--color-warm-gray-dark);
+  color: var(--color-text-secondary);
 }
 
 .artists-grid {
@@ -24,16 +24,16 @@
 }
 
 .artist-card {
-  background: var(--color-warm-white);
-  border-radius: var(--radius-md);
+  background: var(--color-bg-primary);
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-base), border-color var(--transition-base);
 }
 
 .artist-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+  border-color: var(--color-accent-primary);
 }
 
 .artist-card__link {
@@ -56,7 +56,7 @@
 }
 
 .artist-card:hover .artist-card__image {
-  transform: scale(1.04);
+  transform: scale(1.02);
 }
 
 .artist-card__body {
@@ -68,7 +68,7 @@
   font-size: var(--text-xl);
   font-weight: 600;
   margin-bottom: 4px;
-  color: var(--color-charcoal);
+  color: var(--color-text-primary);
 }
 
 .artist-card__medium {
@@ -77,22 +77,22 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-navy);
+  color: var(--color-accent-primary);
   margin-bottom: var(--space-1);
 }
 
 .artist-card__tagline {
   font-size: var(--text-base);
-  color: var(--color-warm-gray-dark);
+  color: var(--color-text-secondary);
   line-height: 1.5;
 }
 
 /* Filter placeholder area (future) */
 .artists-filter {
-  display: none; /* Hidden at launch — activate when filters are needed */
+  display: none;
   margin-bottom: var(--space-6);
   padding: var(--space-2) 0;
-  border-bottom: 1px solid var(--color-warm-gray);
+  border-bottom: 1px solid var(--color-border);
 }
 
 @media (max-width: 768px) {

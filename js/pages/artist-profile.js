@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   const metaDesc = document.querySelector('meta[name="description"]');
   if (metaDesc) metaDesc.setAttribute('content', `${artist.tagline}. Discover ${artist.name}'s story, creative process, and available work at Kindred Seal.`);
 
+  // --- Update Breadcrumb ---
+  const breadcrumbCurrent = document.getElementById('breadcrumb-current');
+  if (breadcrumbCurrent) breadcrumbCurrent.textContent = artist.name;
+
   // --- Hero ---
   heroEl.innerHTML = `
     <img src="${artist.heroImage}" alt="${artist.name}'s studio" class="artist-hero__image">

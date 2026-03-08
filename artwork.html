@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/site/ks-monogram-ink-navy.png">
   <title>Artwork | Kindred Seal</title>
   <meta name="description" content="View this artwork and learn the story behind it.">
   <link rel="canonical" href="https://kindredseal.com/artwork.html">
@@ -17,11 +18,6 @@
   <meta name="twitter:title" content="Artwork | Kindred Seal">
   <meta name="twitter:description" content="View this artwork and learn the story behind it.">
   <meta name="twitter:image" content="images/site/og-image.jpg">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/global.css">
@@ -46,10 +42,13 @@
   <!-- Navigation -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo">Kindred Seal</a>
+      <a href="index.html" class="nav__logo">
+        <img src="images/site/ks-monogram-deep-ocean.png" alt="" class="nav__logo-monogram">
+        Kindred Seal
+      </a>
       <div class="nav__links">
-        <a href="index.html" class="nav__link">Home</a>
-        <a href="artists.html" class="nav__link active">Artists</a>
+        <a href="gallery.html" class="nav__link">Gallery</a>
+        <a href="artists.html" class="nav__link">Artists</a>
         <a href="journal.html" class="nav__link">Journal</a>
         <a href="about.html" class="nav__link">About</a>
         <a href="faq.html" class="nav__link">FAQ</a>
@@ -63,8 +62,8 @@
     </div>
     <div class="nav__overlay"></div>
     <div class="nav__mobile-panel" role="dialog" aria-label="Mobile menu">
-      <a href="index.html" class="nav__mobile-link">Home</a>
-      <a href="artists.html" class="nav__mobile-link active">Artists</a>
+      <a href="gallery.html" class="nav__mobile-link">Gallery</a>
+      <a href="artists.html" class="nav__mobile-link">Artists</a>
       <a href="journal.html" class="nav__mobile-link">Journal</a>
       <a href="about.html" class="nav__mobile-link">About</a>
       <a href="faq.html" class="nav__mobile-link">FAQ</a>
@@ -74,6 +73,15 @@
 
   <!-- Main Content -->
   <main id="main-content">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb__separator">/</span>
+      <a href="artists.html">Artists</a>
+      <span class="breadcrumb__separator">/</span>
+      <span id="breadcrumb-current">Artwork</span>
+    </nav>
 
     <section class="artwork-detail section">
       <div class="container">
@@ -93,11 +101,15 @@
     <div class="footer__inner">
       <div class="footer__top">
         <div class="footer__brand">
-          <div class="footer__logo">Kindred Seal</div>
-          <p class="footer__tagline">Reconnecting people with art that is beautiful, meaningful, and worth knowing the story behind.</p>
+          <div class="footer__logo">
+            <img src="images/site/ks-monogram-fog.png" alt="" class="footer__monogram">
+            Kindred Seal
+          </div>
+          <p class="footer__tagline">Enriching everyday life through beautiful art and the meaningful stories behind it.</p>
         </div>
         <div>
           <p class="footer__heading">Explore</p>
+          <a href="gallery.html" class="footer__link">Gallery</a>
           <a href="artists.html" class="footer__link">Artists</a>
           <a href="journal.html" class="footer__link">Journal</a>
           <a href="about.html" class="footer__link">About</a>
@@ -117,6 +129,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>

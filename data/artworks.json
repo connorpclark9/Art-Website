@@ -8,6 +8,7 @@
     "dimensions": "48\" x 60\"",
     "year": 2025,
     "status": "available",
+    "price": "$X,XXX",
     "mainImage": "images/artworks/art-placeholder-1.jpg",
     "images": [
       "images/artworks/art-placeholder-1.jpg",
@@ -27,6 +28,7 @@
     "dimensions": "36\" x 48\"",
     "year": 2024,
     "status": "available",
+    "price": "$X,XXX",
     "mainImage": "images/artworks/art-placeholder-2.jpg",
     "images": [
       "images/artworks/art-placeholder-2.jpg",
@@ -46,6 +48,7 @@
     "dimensions": "24\" x 30\"",
     "year": 2025,
     "status": "collected",
+    "price": "$X,XXX",
     "mainImage": "images/artworks/art-placeholder-3.jpg",
     "images": [
       "images/artworks/art-placeholder-3.jpg",
@@ -65,6 +68,7 @@
     "dimensions": "18\" x 12\" x 12\"",
     "year": 2024,
     "status": "available",
+    "price": "$X,XXX",
     "mainImage": "images/artworks/art-placeholder-4.jpg",
     "images": [
       "images/artworks/art-placeholder-4.jpg",
@@ -84,6 +88,7 @@
     "dimensions": "8\" x 6\" x 6\"",
     "year": 2025,
     "status": "collected",
+    "price": "$XXX",
     "mainImage": "images/artworks/art-placeholder-5.jpg",
     "images": [
       "images/artworks/art-placeholder-5.jpg",
@@ -103,6 +108,7 @@
     "dimensions": "22\" x 28\" x 14\"",
     "year": 2024,
     "status": "available",
+    "price": "$X,XXX",
     "mainImage": "images/artworks/art-placeholder-6.jpg",
     "images": [
       "images/artworks/art-placeholder-6.jpg",
@@ -122,6 +128,7 @@
     "dimensions": "40\" x 30\"",
     "year": 2025,
     "status": "available",
+    "price": "$X,XXX",
     "mainImage": "images/artworks/art-placeholder-7.jpg",
     "images": [
       "images/artworks/art-placeholder-7.jpg",
@@ -141,6 +148,7 @@
     "dimensions": "30\" x 30\"",
     "year": 2024,
     "status": "available",
+    "price": "$X,XXX",
     "mainImage": "images/artworks/art-placeholder-8.jpg",
     "images": [
       "images/artworks/art-placeholder-8.jpg",
@@ -160,6 +168,7 @@
     "dimensions": "24\" x 36\"",
     "year": 2025,
     "status": "collected",
+    "price": "$X,XXX",
     "mainImage": "images/artworks/art-placeholder-9.jpg",
     "images": [
       "images/artworks/art-placeholder-9.jpg",
@@ -179,6 +188,7 @@
     "dimensions": "22\" x 30\"",
     "year": 2024,
     "status": "available",
+    "price": "$XXX",
     "mainImage": "images/artworks/art-placeholder-10.jpg",
     "images": [
       "images/artworks/art-placeholder-10.jpg",
@@ -198,6 +208,7 @@
     "dimensions": "18\" x 24\"",
     "year": 2025,
     "status": "available",
+    "price": "$XXX",
     "mainImage": "images/artworks/art-placeholder-1.jpg",
     "images": [
       "images/artworks/art-placeholder-1.jpg",
@@ -217,6 +228,7 @@
     "dimensions": "15\" x 22\"",
     "year": 2024,
     "status": "collected",
+    "price": "$XXX",
     "mainImage": "images/artworks/art-placeholder-2.jpg",
     "images": [
       "images/artworks/art-placeholder-2.jpg",
@@ -236,6 +248,7 @@
     "dimensions": "18\" x 24\"",
     "year": 2025,
     "status": "available",
+    "price": "$XXX",
     "mainImage": "images/artworks/art-placeholder-3.jpg",
     "images": [
       "images/artworks/art-placeholder-3.jpg",

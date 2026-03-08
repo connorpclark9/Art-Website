@@ -88,15 +88,19 @@ document.addEventListener('DOMContentLoaded', async () => {
       </div>
     </div>
 
-    <div class="artwork-detail__inquiry">
-      <p class="artwork-detail__inquiry-label">Pricing</p>
-      <p class="artwork-detail__inquiry-price">Inquire for Pricing</p>
-      <p class="artwork-detail__inquiry-text">
-        Interested in this piece? We'd love to help.
-      </p>
-      <a href="${KindredSeal.getInquiryEmail(subject)}" class="btn btn--primary" style="width: 100%; text-align: center;">
-        Email Us About This Piece
-      </a>
+    <div class="artwork-detail__pricing">
+      <div class="artwork-detail__pricing-header">
+        <p class="artwork-detail__pricing-label">${artwork.status === 'collected' ? 'Collected' : 'Price'}</p>
+        <p class="artwork-detail__pricing-amount">${artwork.status === 'collected' ? 'This piece has found its home' : artwork.price}</p>
+      </div>
+      ${artwork.status === 'available' ? `
+        <p class="artwork-detail__pricing-note">Shipping and handling quoted separately</p>
+        <a href="${KindredSeal.getInquiryEmail(subject)}" class="btn btn--primary artwork-detail__pricing-btn">
+          Inquire About This Piece
+        </a>
+      ` : `
+        <p class="artwork-detail__pricing-note">Explore other available works by this artist</p>
+      `}
     </div>
   `;
 

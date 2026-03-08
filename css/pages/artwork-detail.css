@@ -115,36 +115,46 @@
   margin-bottom: var(--space-6);
 }
 
-/* Inquiry Section */
-.artwork-detail__inquiry {
+/* Pricing Section */
+.artwork-detail__pricing {
   background: var(--brand-parchment);
   border-radius: 0;
   padding: var(--space-4);
   border: 1px solid var(--color-border);
 }
 
-.artwork-detail__inquiry-label {
+.artwork-detail__pricing-header {
+  margin-bottom: var(--space-3);
+}
+
+.artwork-detail__pricing-label {
   font-family: var(--font-sans);
   font-size: var(--text-xs);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: var(--color-text-secondary);
   margin-bottom: var(--space-1);
 }
 
-.artwork-detail__inquiry-price {
+.artwork-detail__pricing-amount {
   font-family: var(--font-serif);
-  font-size: var(--text-xl);
+  font-size: var(--text-2xl);
   font-weight: 600;
   color: var(--color-text-primary);
+  letter-spacing: 0.01em;
+}
+
+.artwork-detail__pricing-note {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
   margin-bottom: var(--space-3);
 }
 
-.artwork-detail__inquiry-text {
-  font-size: var(--text-sm);
-  color: var(--color-text-secondary);
-  margin-bottom: var(--space-2);
+.artwork-detail__pricing-btn {
+  width: 100%;
+  text-align: center;
 }
 
 /* --- More From Artist --- */

@@ -19,7 +19,10 @@
       "Bash(ls \"C:\\\\Users\\\\Conno\\\\OneDrive\\\\Documents\\\\GitHub\\\\Art-Website\\\\images\\\\site\\\\ks-monogram-slate\"*)",
       "Bash(grep -c \"nav__link\" *.html)",
       "Bash(grep -n \"faq.html.*nav__link\" *.html)",
-      "Bash(grep -n \"faq.html.*nav__mobile-link\" *.html)"
+      "Bash(grep -n \"faq.html.*nav__mobile-link\" *.html)",
+      "Bash(where npx)",
+      "Bash(where serve)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)"
     ]
   }
 }

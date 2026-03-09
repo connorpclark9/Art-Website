@@ -41,13 +41,18 @@
 
 .carousel__slide-attribution {
   position: absolute;
-  bottom: var(--space-2);
-  left: var(--space-3);
+  bottom: var(--space-4);
+  right: var(--space-3);
   font-family: var(--font-sans);
-  font-size: var(--text-xs);
-  color: rgba(247, 243, 236, 0.65);
+  font-size: var(--text-sm);
+  color: rgba(247, 243, 236, 0.9);
   z-index: 3;
   letter-spacing: 0.02em;
+  background: rgba(50, 50, 50, 0.45);
+  backdrop-filter: blur(6px);
+  padding: var(--space-1) var(--space-2);
+  border-radius: 6px;
+  line-height: 1.4;
 }
 
 .carousel__overlay {
@@ -156,13 +161,14 @@
 }
 
 .carousel__dot {
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
-  border: 2px solid rgba(247, 243, 236, 0.6);
+  border: 1.5px solid rgba(247, 243, 236, 0.5);
   background: transparent;
   cursor: pointer;
-  padding: 8px;
+  padding: 0;
+  opacity: 0.65;
   box-sizing: content-box;
   transition: all var(--transition-fast);
 }
@@ -170,6 +176,7 @@
 .carousel__dot.is-active {
   background: var(--brand-paper);
   border-color: var(--brand-paper);
+  opacity: 0.85;
 }
 
 /* --- Brand Intro --- */
@@ -414,8 +421,24 @@
 
   .carousel__prev,
   .carousel__next {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .carousel__dots {
+    bottom: var(--space-2);
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    gap: 6px;
+  }
+
+  .carousel__slide-attribution {
+    bottom: auto;
+    top: var(--space-2);
+    right: var(--space-2);
+    font-size: var(--text-xs);
+    padding: 4px 8px;
   }
 
   .featured-artists__grid {

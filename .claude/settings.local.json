@@ -22,7 +22,10 @@
       "Bash(grep -n \"faq.html.*nav__mobile-link\" *.html)",
       "Bash(where npx)",
       "Bash(where serve)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(node -e \"try { JSON.parse\\(require\\(''fs''\\).readFileSync\\(''data/artists.json'',''utf8''\\)\\); console.log\\(''Valid JSON''\\); } catch\\(e\\) { console.log\\(''Invalid JSON:'', e.message\\); }\")",
+      "Bash(node -e \"try { JSON.parse\\(require\\(''fs''\\).readFileSync\\(''data/journal.json'',''utf8''\\)\\); console.log\\(''Valid JSON''\\); } catch\\(e\\) { console.log\\(''Invalid JSON:'', e.message\\); }\")",
+      "Bash(node -e \"const d=JSON.parse\\(require\\(''fs''\\).readFileSync\\(''data/artists.json'',''utf8''\\)\\); d.forEach\\(a => { const storyImgs = \\(a.story.match\\(/<img/g\\)||[]\\).length; const procImgs = \\(a.processDescription.match\\(/<img/g\\)||[]\\).length; console.log\\(a.id + '': story='' + storyImgs + '' process='' + procImgs\\); }\\);\")"
     ]
   }
 }
